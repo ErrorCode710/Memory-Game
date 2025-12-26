@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "DsFont";
+  src: url("../assets/font/Demon-Slayer-Font/blood-crow.ttf");
+}
+
+.card {
+  width: 220px;
+  overflow: hidden;
+  background-image: url("../assets/img/cardBg.jpg");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+.card img {
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.card h4 {
+  margin: 0;
+  white-space: pre-line;
+  text-align: center;
+  font-size: 1.65rem;
+  color: white;
+  font-family: "DsFont", Courier, monospace;
+}
