@@ -117,4 +117,15 @@ This project is part of **The Odin Project – React Curriculum**.
 
 ---
 
+<<<<<<< HEAD
 
+=======
+If you want, I can:
+
+- Rewrite this README to sound more **portfolio-level**
+- Add **GIF demo section**
+- Add **learning outcomes** section (TOP reviewers love that)
+- Audit your code for **bad practices you should fix before submission**
+
+Say the word.
+>>>>>>> da0a34aa394be8d8ae020534f84626d2be6720e7
