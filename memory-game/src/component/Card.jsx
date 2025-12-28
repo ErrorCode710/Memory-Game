@@ -4,7 +4,6 @@ import Tilt from "react-parallax-tilt";
 function Card({ img, name, onClick, flipped }) {
   const [first, second = ""] = name.split(" ");
   // const [flipped, setFlipped] = useState(false);
- 
 
   // const handleFlip = () => {
   //   setFlipped(true);
@@ -19,6 +18,7 @@ function Card({ img, name, onClick, flipped }) {
         glareMaxOpacity={0.6}
         glareColor="#ffffffff"
         glarePosition="bottom"
+        glareBorderRadius="20px"
         style={{ width: "220px", height: "420px" }}
       >
         <div className={style.card}>

@@ -5,6 +5,14 @@ import { useState } from "react";
 import randomCard from "../../utils/utils";
 import Header from "../header";
 
+import clickSoundFile from "../../assets/sounds/click.wav";
+import flipSoundFile from "../../assets/sounds/flip.mp3";
+import lossSoundFile from "../../assets/sounds/loss.mp3";
+
+const clickSound = new Audio(clickSoundFile);
+const flipSound = new Audio(flipSoundFile);
+const lossSound = new Audio(lossSoundFile);
+
 function MainScreen() {
   // HOOKS
 
@@ -23,10 +31,14 @@ function MainScreen() {
   // EVENT HANDLER
 
   const handleClick = (id) => {
+    clickSound.play();
+
     if (clicked.includes(id)) {
       setClicked([]);
       setCurrentScore((prevScore) => {
         setHighScore((prevHigh) => Math.max(prevHigh, prevScore));
+        
+        lossSound.play();
         return 0;
       });
     } else {
@@ -34,6 +46,7 @@ function MainScreen() {
       setClicked((prev) => [...prev, id]);
     }
 
+    flipSound.play();
     toggleFlip(true);
 
     setTimeout(() => {
