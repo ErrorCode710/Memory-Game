@@ -1,7 +1,6 @@
-import MainScreen from "./component/MainScreen";
-// import Header from "./component/header";
+import MainScreen from "./component/MainScreen/index";
+
 import "./styles/global.css";
-import Loader from "./component/Loader";
 
 function App() {
   // const [loading, setLoading] = useState(false);
