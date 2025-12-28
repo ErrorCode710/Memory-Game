@@ -1,7 +1,6 @@
 import MainScreen from "./component/MainScreen";
-import Header from "./component/header";
+// import Header from "./component/header";
 import "./styles/global.css";
-
 import Loader from "./component/Loader";
 
 function App() {
