@@ -1,5 +1,5 @@
 import Card from "../Card";
-import { characters } from "../../data/character";
+import { characters } from "../../data/Character";
 import styles from "../../styles/mainScreen.module.css";
 import { useState } from "react";
 import randomCard from "../../utils/utils";
