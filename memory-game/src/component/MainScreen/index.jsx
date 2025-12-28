@@ -1,4 +1,4 @@
-import Card from "../card";
+import Card from "../Card";
 import { characters } from "../../data/character";
 import styles from "../../styles/mainScreen.module.css";
 import { useState } from "react";
@@ -37,7 +37,7 @@ function MainScreen() {
       setClicked([]);
       setCurrentScore((prevScore) => {
         setHighScore((prevHigh) => Math.max(prevHigh, prevScore));
-        
+
         lossSound.play();
         return 0;
       });
