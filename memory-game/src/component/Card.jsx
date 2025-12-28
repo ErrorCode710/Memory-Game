@@ -1,14 +1,31 @@
-import { useState } from "react";
 import style from "../styles/card.module.css";
-function Card({ img, name, onClick }) {
+import Tilt from "react-parallax-tilt";
+
+function Card({ img, name, onClick, flipped }) {
+  const [first, second = ""] = name.split(" ");
+  // const [flipped, setFlipped] = useState(false);
+
   return (
-    <div className={style.card} onClick={onClick}>
-      <img src={img}></img>
-      <h4 className="card-label">
-        {name.split(" ")[0]}
-        <br />
-        {name.split(" ")[1]}
-      </h4>
+    <div className={`${style.cardWrapper} ${flipped ? style.cardWrapperFlipped : ""}`} onClick={onClick}>
+      <Tilt
+        glareEnable={true}
+        glareMaxOpacity={0.6}
+        glareColor="#ffffffff"
+        glarePosition="bottom"
+        style={{ width: "220px", height: "420px" }}
+      >
+        <div className={style.card}>
+          <div className={style.cardFront}>
+            <img src={img}></img>
+            <h4 className="card-label">
+              {first}
+              <br />
+              {second}
+            </h4>
+          </div>
+          <div className={style.cardBack}></div>
+        </div>
+      </Tilt>
     </div>
   );
 }

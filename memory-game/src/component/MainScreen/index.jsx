@@ -3,17 +3,20 @@ import { characters } from "../../data/character";
 import styles from "../../styles/mainScreen.module.css";
 import { useEffect, useState } from "react";
 import randomCard from "../../utils/utils";
+import Header from "../header";
 
 function MainScreen() {
   // HOOKS
-  const [charName, setCharName] = useState();
+
   const [clicked, setClicked] = useState([]);
   const [highScore, setHighScore] = useState(0);
   const [currentScore, setCurrentScore] = useState(0);
+  const [flipped, toggleFlip] = useState(false);
 
   const [cards, setCards] = useState(() => randomCard(characters));
 
   // EFFECT
+  //   useEffect(() => [highScore]);
 
   // HELPERS
 
@@ -31,13 +34,19 @@ function MainScreen() {
       setClicked((prev) => [...prev, id]);
     }
 
-    setCards(randomCard(characters));
+    toggleFlip(true);
+
+    setTimeout(() => {
+      setCards(randomCard(characters));
+      toggleFlip(false);
+    }, 600);
   };
 
   // Render Logic
 
   return (
-    <div>
+    <div className={styles["wrapper"]}>
+      <Header highScore={highScore} currentScore={currentScore}></Header>
       <div className={styles["card-container"]}>
         {cards.map((char) => {
           return (
@@ -46,13 +55,12 @@ function MainScreen() {
               img={char.img}
               name={char.name}
               onClick={() => handleClick(char.id)}
+              flipped={flipped}
               isCliked={clicked}
             ></Card>
           );
         })}
       </div>
-      <h4>{currentScore}</h4>
-      <h4>{highScore}</h4>
     </div>
   );
 }

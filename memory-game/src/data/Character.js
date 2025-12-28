@@ -9,7 +9,7 @@ import tengen from "../assets/img/characters/tengen.webp";
 import mitsuri from "../assets/img/characters/mitsuri.webp";
 import muichiro from "../assets/img/characters/muichiro.webp";
 import sanemi from "../assets/img/characters/sanemi.webp";
-import muzan from "../assets/img/characters/muzan.webp";
+import muzan from "../assets/img/characters/muzan1.webp";
 
 class Character {
   constructor(id, name, img) {

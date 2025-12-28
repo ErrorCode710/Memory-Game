@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "DsFont";
+  src: url("../assets/font/Demon-Slayer-Font/blood-crow.ttf");
+}
+
+@font-face {
+  font-family: "DsFontShadow";
+  src: url("../assets/font/Demon-Slayer-Font/blood-crow-Expanded.ttf");
+}
+body {
+  font-family: "DsFont", sans-serif; /* optional default */
+}

@@ -3,26 +3,93 @@
   src: url("../assets/font/Demon-Slayer-Font/blood-crow.ttf");
 }
 
-.card {
+/* .card {
   width: 220px;
+  height: 420px;
+  overflow: hidden;
+  background-image: url("../assets/img/cardBg.jpg");
+  background-color: #f5f5dc;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  backface-visibility: hidden;
+}
+
+.cardBack {
+  position: absolute;
+  width: 220px;
+  height: 420px;
   overflow: hidden;
   background-image: url("../assets/img/cardBg.jpg");
   background-size: cover;
   background-position: center;
   cursor: pointer;
-}
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  backface-visibility: hidden;
+} */
 
-.card img {
+.card {
   width: 100%;
-
-  object-fit: cover;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+.cardWrapper {
+  width: 220px;
+  height: 420px;
+  perspective: 1000px;
 }
 
-.card h4 {
+.cardFront {
+  background-color: #f5f5dc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cardBack {
+  background-image: url("../assets/img/cardBg.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}
+.cardWrapperFlipped .card {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  /* overflow: hidden; */
+}
+
+.cardFront img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.cardFront h4 {
   margin: 0;
   white-space: pre-line;
   text-align: center;
   font-size: 1.65rem;
-  color: white;
+  color: black;
   font-family: "DsFont", Courier, monospace;
+  margin-top: auto;
+  /* background-color: rgb(212, 86, 86); */
+  padding-bottom: 1rem;
+
+  text-shadow: 3px 5px 2px #f4efef;
 }
