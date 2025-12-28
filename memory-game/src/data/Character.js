@@ -33,3 +33,17 @@ export const characters = [
   new Character(11, "Sanemi Shinazugawa", sanemi),
   new Character(12, "Muzan Kibutsuji", muzan),
 ];
+// export const characters = [
+//   new Character(1, "Tanjiro Kamado", muzan),
+//   new Character(2, "Nezuko Kamado", muzan),
+//   new Character(3, "Zenitsu Agatsuma", muzan),
+//   new Character(4, "Inosuke Hashibira", muzan),
+//   new Character(5, "Giyu Tomioka", muzan),
+//   new Character(6, "Shinobu Kocho", muzan),
+//   new Character(7, "Kyojuro Rengoku", muzan),
+//   new Character(8, "Tengen Uzui", muzan),
+//   new Character(9, "Mitsuri Kanroji", muzan),
+//   new Character(10, "Muichiro Tokito", muzan),
+//   new Character(11, "Sanemi Shinazugawa", muzan),
+//   new Character(12, "Muzan Kibutsuji", muzan),
+// ];

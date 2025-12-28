@@ -4,6 +4,13 @@ import Tilt from "react-parallax-tilt";
 function Card({ img, name, onClick, flipped }) {
   const [first, second = ""] = name.split(" ");
   // const [flipped, setFlipped] = useState(false);
+ 
+
+  // const handleFlip = () => {
+  //   setFlipped(true);
+  //   onClick();
+  //   setTimeout(() => setFlipped(false), 600); // reset flip after animation
+  // };
 
   return (
     <div className={`${style.cardWrapper} ${flipped ? style.cardWrapperFlipped : ""}`} onClick={onClick}>

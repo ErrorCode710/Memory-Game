@@ -1,7 +1,7 @@
 import Card from "../card";
 import { characters } from "../../data/character";
 import styles from "../../styles/mainScreen.module.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import randomCard from "../../utils/utils";
 import Header from "../header";
 
@@ -37,9 +37,11 @@ function MainScreen() {
     toggleFlip(true);
 
     setTimeout(() => {
-      setCards(randomCard(characters));
-      toggleFlip(false);
+      setCards(randomCard(characters)); // This function replace the card on dom i think
     }, 600);
+    setTimeout(() => {
+      toggleFlip(false); // cards flip back to front
+    }, 800); // 200ms after shuffle
   };
 
   // Render Logic
