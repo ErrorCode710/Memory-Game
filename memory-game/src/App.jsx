@@ -1,9 +1,8 @@
 import MainScreen from "./component/MainScreen";
 import Header from "./component/header";
 import "./styles/global.css";
-import { characters } from "./data/character";
+
 import Loader from "./component/Loader";
-import { useEffect, useState } from "react";
 
 function App() {
   // const [loading, setLoading] = useState(false);
