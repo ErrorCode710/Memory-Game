@@ -3,7 +3,7 @@ import { characters } from "../../data/Character";
 import styles from "../../styles/mainScreen.module.css";
 import { useState } from "react";
 import randomCard from "../../utils/utils";
-import Header from "../header";
+import Header from "../Header";
 
 import clickSoundFile from "../../assets/sounds/click.wav";
 import flipSoundFile from "../../assets/sounds/flip.mp3";
