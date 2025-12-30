@@ -1,4 +1,4 @@
-Alright, I’ll write you a **proper README**, not the lazy “npm install, npm start” trash. This is **Top (The Odin Project) Memory Card game**, so the README needs to clearly explain **game rules, tech decisions, and logic**. Here it is — you can paste this directly as `README.md`.
+
 
 ---
 
